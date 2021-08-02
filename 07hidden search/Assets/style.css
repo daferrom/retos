@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap");
+
+* {
+  box-sizing: border-box;
+
+}
+
+body {
+  background-image: linear-gradient(90deg, #777777, #7158ee);
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.search {
+  position: relative;
+  height: 25px;
+  background-color: white;
+  /*
+  width: 50px;*/
+  
+
+}
+
+.search .input {
+  border: 0;
+  display:none;
+}
+.btn {
+
+  border: 0;
+  cursor: pointer;
+  background-color: white;
+
+}
+
+.btn:focus,
+.input:focus {
+  border: 0;
+  cursor: pointer;
+  background-color: rgba(194, 194, 194, 0);
+}
+
+.search.active .input {
+}
+
+.search.active .btn {
+
+
+}
+/
+/*Codigo maria alejandra resuelto desde CSS
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  
+
+}
+
+html{
+
+
+font-size: 63%;
+
+}
+
+body {
+  background-image: linear-gradient(5deg, #777777, #7158ee);
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+a,
+a:hover{
+   text-decoration: none;
+
+
+}
+
+.searchBox {
+  position: relative;
+  display: flex;
+  justify-content: center ;
+  align-items: center;
+  
+  
+}
+
+.searchText {
+  width: 0rem;
+  
+  border: none;
+  outline: none;
+  transition: all 0.2s linear;
+}
+.searchText:focus{
+
+   outline:none
+
+}
+
+.searchBtn {
+  width: 5rem;
+  height: 5rem;
+  background-color:white;
+  color: black;
+  position: absolute;
+  right: 1rem;
+  display: grid;
+  place-items:center;
+  border-radius: 0%;
+  
+}
+
+.searchBox:hover > .searchText{
+
+   width: 25rem ;
+   padding: 2rem;
+
+
+}
+*/
