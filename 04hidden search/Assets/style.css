@@ -14,45 +14,53 @@ body {
   height: 100vh;
   margin: 0;
   overflow: hidden;
+  min-height:100vh;
 }
 
 .search {
   position: relative;
-  height: 25px;
-  background-color: white;
-  /*
-  width: 50px;*/
-  
+  height: 50px;
 
 }
 
 .search .input {
+  background-color:#fff;
+  padding:10px;
+  border :0;
+  height:50px;
+  width: 50px;
+  font-size:18px;
   border: 0;
-  display:none;
+  transition: width 0.3s ease;  
 }
-.btn {
+.search .button{
+  background-color: #fff;
+  border:0;
 
-  border: 0;
-  cursor: pointer;
-  background-color: white;
+  position:absolute;
+  top:0;
+  left:0;
+  height: 50px;
+  width: 50px;
+  font-size: 20px;
+  transition: width 0.3s ease;  
 
-}
-
-.btn:focus,
-.input:focus {
-  border: 0;
-  cursor: pointer;
-  background-color: rgba(194, 194, 194, 0);
-}
-
-.search.active .input {
 }
 
-.search.active .btn {
 
-
+.search.active .button{
+  transform: translateX(200px)
 }
-/
+.search.active input{
+  width: 200px;
+}
+.search .input:focus, .search .button:focus{
+  outline: 0;
+}
+
+
+
+
 /*Codigo maria alejandra resuelto desde CSS
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,400&display=swap");
