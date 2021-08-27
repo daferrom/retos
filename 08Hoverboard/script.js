@@ -1,6 +1,6 @@
 const container = document.getElementById('container')
 const colors = ['#00ffff', '#FF00FF', '#FFFF00', '#00FF00', '#ff0000','#0000FF']
-const SQUARES = 500
+const SQUARES = 1000
 /////Creacion de cuadrados con for///
 for(let i = 0; i < SQUARES;i++ ) {
     const square = document.createElement('div')
