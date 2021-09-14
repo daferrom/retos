@@ -8,7 +8,7 @@ filter.addEventListener('input', (e) => filterData(e.target.value))
 
 async function getData(){
     //call the api and save the results in a const res//
-    const res = await fetch('https://randomuser.me/api?results=50')
+    const res = await fetch('https://randomuser.me/api?results=100')
    console.log(res)
     const { results } = await res.json()
     console.log(results)
