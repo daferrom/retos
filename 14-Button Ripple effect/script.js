@@ -1,11 +1,9 @@
-
-
 const buttons = document.querySelectorAll('.button')
 
 buttons.forEach(button => {
     button.addEventListener('click', function (e) {
         
-        let x = e.clientX - e.target.offsetLeft -60;
+        let x = e.clientX - e.target.offsetLeft -30;
         let y = e.clientY - e.target.offsetTop -20;
 
         //revisar 
