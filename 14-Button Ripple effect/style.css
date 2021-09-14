@@ -50,16 +50,15 @@ button:focus {
 
 @keyframes animate {
   0% {
-    /*transform: scale(3);
-    opacity: 0;
-    animation: ripple 1s;*/
+    
+    
     width: 0px;
     height: 0px;
   }
   100% {
     /*transform: scale(3);
-    opacity: 0;
-    animation: ripple 1s;*/
+    opacity: 0;*/
+    animation: ripples 1s;
     width: 500px;
     height: 500px;
     opacity: 0;
