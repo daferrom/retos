@@ -36,11 +36,11 @@ leftBtn.addEventListener('click', () => {
 
 setBgToBody()
 
-
+// the function update the background according to the var activeStyle(the position of the image in the array)
 function setBgToBody() {
   body.style.backgroundImage = slides[activeSlide].style.backgroundImage
 }
-
+// the function update the slide according to the var activeStyle(the position of the image in the array)
 function setActiveSlides() {
   slides.forEach((slide) => slide.classList.remove('active'))
 
