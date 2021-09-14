@@ -6,21 +6,27 @@ getData()
 
 filter.addEventListener('input', (e) => filterData(e.target.value))
 
-function getData() {
-    const res = 
-
-    const {  } = json()
-
+async function getData(){
+    //call the api and save the results in a const res//
+    const res = await fetch('https://randomuser.me/api?results=50')
+   console.log(res)
+    const { results } = await res.json()
+    console.log(results)
     // Clear result
     result.innerHTML = ''
 
-    (user => {
-        const li = document.createElement('li')
 
+    results.forEach(user => {
+        const li = document.createElement('li')
+        console.log(li)
         listItems.push(li)
 
         li.innerHTML = `
- 
+        <img src="${user.picture.large}" alt="${user.name.first}">
+            <div class="user-info">
+                <h4>${user.name.first} ${user.name.last}</h4>
+                <p>${user.location.city}, ${user.location.country}</p>
+            </div> 
         `
 
         result.appendChild(li)
