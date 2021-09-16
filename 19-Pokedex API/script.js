@@ -61,7 +61,7 @@ const createPokemonCard = (pokemon) => {
 		<div class="info">
 			<span class="number">#${pokemon.id.toString().padStart(3,'0')}</span>
 			<h3 class="name">${name} 
-			
+		</div>
 			`;
 
 	pokemonEl.innerHTML = pokeInnerHTML;
