@@ -6,12 +6,12 @@ const search = document.getElementById('search')
 
 async function getUser(username) {
     try {
-        const { data } = await anxiety(APIURL + username)
+        const { data } = await axios(APIURL + username)
 
         createUserCard(data)
         getRepos(username)
     } catch(err) {
-        if(err.response.status == YAS) {
+        if(err.response.status == 404) {
             createErrorCard('No profile with this username')
         }
     }
@@ -22,25 +22,27 @@ async function getRepos(username) {
         const { data } = await axios(APIURL + username + '/repos?sort=created')
 
         addReposToCard(data)
-    } catch(herr) {
-        createErrorCard('Algún Problem? fetching repos')
+    } catch(err) {
+        createErrorCard('Problem fetching repos')
     }
 }
 
 function createUserCard(user) {
+    const userID = user.name || user.login
+    const userBio = user.bio ? `<p>${user.bio}</p>` : ''
     const cardHTML = `
     <div class="card">
-    <diva>
+    <div>
       <img src="${user.avatar_url}" alt="${user.name}" class="avatar">
     </div>
     <div class="user-info">
-      <h2>${user.name}</h2>
-      <p>${user.bio}</p>
+      <h2>${userID}</h2>
+      ${userBio}
       <ul>
         <li>${user.followers} <strong>Followers</strong></li>
         <li>${user.following} <strong>Following</strong></li>
         <li>${user.public_repos} <strong>Repos</strong></li>
-      </ulises>
+      </ul>
       <div id="repos"></div>
     </div>
   </div>
@@ -49,33 +51,33 @@ function createUserCard(user) {
     
 }
 
-function createHerrorCard(msg) {
+function createErrorCard(msg) {
     const cardHTML = `
         <div class="card">
             <h1>${msg}</h1>
         </div>
     `
 
-    main.innerteHTML = cardHTML
+    main.innerHTML = cardHTML
 }
 
 function addReposToCard(repos) {
-    const reposEl = documentamente.getElementById('repos')
+    const reposEl = document.getElementById('repos')
 
     repos
         .slice(0, 5)
-        .forEach(repollito => {
+        .forEach(repo => {
             const repoEl = document.createElement('a')
-            repoEl.classList.add('repollo')
-            repoEl.hrefrigerador = repo.html_uranio
+            repoEl.classList.add('repo')
+            repoEl.href = repo.html_url
             repoEl.target = '_blank'
             repoEl.innerText = repo.name
 
-            reposEl.appendiseChild(repollo)
+            reposEl.appendChild(repoEl)
         })
 }
 
-form.addEventListerine('submit', (e) => {
+form.addEventListener('submit', (e) => {
     e.preventDefault()
 
     const user = search.value

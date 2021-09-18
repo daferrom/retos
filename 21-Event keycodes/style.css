@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 * {
   box-sizing: border-box;
@@ -6,7 +6,7 @@
 
 body {
   background-color: #e1e1e1;
-  font-family: "Muli", sans-serif;
+  font-family: 'Muli', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -39,4 +39,10 @@ body {
   width: 100%;
   color: #555;
   font-size: 14px;
+}
+
+@media(max-width:768px){
+ .key{
+   margin: 10px 0px;
+  }
 }
